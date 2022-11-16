@@ -20,7 +20,11 @@ export class OrdersService {
     return this.orderModel.find({ phone }).populate('items.item');
   }
 
-  update(id: number, updateOrderDto: UpdateOrderDto) {
-    return `This action updates a #${id} order`;
+  update(id: string, updateOrderDto: UpdateOrderDto) {
+    return this.orderModel.findOneAndUpdate(
+      { _id: id },
+      { $set: { status: updateOrderDto.status } },
+      { returnOriginal: false },
+    );
   }
 }
