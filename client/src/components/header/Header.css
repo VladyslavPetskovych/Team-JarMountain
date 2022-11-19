@@ -53,6 +53,15 @@
 .Logo{
     margin-left:-80px;
 }
+.count{
+    color: aliceblue;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(40%, 20%);
+}
 
 
 /* header goods */
@@ -89,7 +98,7 @@
 @media(width <= 700px){
     .header_goods{
         flex-direction: column;
-        margin-top: 70px;
+        margin-top: 30px;
         height: auto;
     }
     .header_goods_buttons{
