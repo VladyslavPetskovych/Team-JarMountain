@@ -1,8 +1,9 @@
 .header_buttons,.contact{
-    height: 55px;
-    min-width: 170px;
+    height: 55px !important;
+    min-width: 170px !important; 
     border: none;
     margin: 0px;
+    margin-left: 30px;
     cursor: pointer;
     font-family: 'inter,Helvetica,Arial,sans-serif';
     font-size: 18px;
@@ -11,8 +12,8 @@
     color:whitesmoke;
 }
 .header_buttons:active{
-    height: 57px;
-    font-size: 19px;
+    height: 57px !important;
+    font-size: 19px !important;
 }
 .header_buttons:hover{
     font-size: 19px;
@@ -43,8 +44,8 @@
     right: 0px;
 }
 .contact:active{
-    height: 53px;
-    font-size: 19px;
+    height: 53px !important;
+    font-size: 19px !important;
 }
 .contact:hover{
     font-size: 19px;
@@ -53,13 +54,13 @@
     margin-left:-80px;
 }
 
+
 /* header goods */
 .header_goods{
     margin-top: 35px;
     height: 55px;
     width: auto;
     border: 1px solid #a2a2a0;
-
 }
 .header_goods_buttons{
     margin: 15px;
@@ -77,11 +78,21 @@
     background-color: #59AB21 ;
 }
 
-@media(max-width:960px){
+@media(max-width:990px){
     .contact,.header_buttons{
         display: none;
     }
     .header_goods_ss{
         display: none ;
+    }
+}
+@media(width <= 700px){
+    .header_goods{
+        flex-direction: column;
+        margin-top: 70px;
+        height: auto;
+    }
+    .header_goods_buttons{
+        margin: 2px;
     }
 }
