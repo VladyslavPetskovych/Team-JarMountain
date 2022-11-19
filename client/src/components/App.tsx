@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 import Home from '../pages/Home'
 import User from '../pages/User'
 import Contact from '../pages/Contact'
-import Payment from '../pages/Payment'
+import Goods from '../pages/Goods'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/user" element={<User />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/payment" element={<Goods />} />
       </Routes>
     </Container>
   );
