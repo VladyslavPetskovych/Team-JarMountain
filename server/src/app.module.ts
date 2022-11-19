@@ -5,10 +5,16 @@ import { ItemsModule } from './items/items.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ImageModule } from './image/image.module';
 import { OrdersModule } from './orders/orders.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017', { dbName: 'yitp' }),
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGO_URL, {
+      dbName: process.env.MONGO_DBNAME,
+      user: process.env.MONGO_USER,
+      pass: process.env.MONGO_PASS,
+    }),
     ItemsModule,
     ImageModule,
     OrdersModule,
