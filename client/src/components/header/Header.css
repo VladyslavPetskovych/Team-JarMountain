@@ -3,14 +3,15 @@
     min-width: 170px !important; 
     border: none;
     margin: 0px;
-    margin-left: 30px;
     cursor: pointer;
     font-family: 'inter,Helvetica,Arial,sans-serif';
     font-size: 18px;
     font-weight: 700;
     background-color: Transparent;
     color:whitesmoke;
+    
 }
+
 .header_buttons:active{
     height: 57px !important;
     font-size: 19px !important;
@@ -60,7 +61,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(40%, 20%);
+    transform: translate(60%);
 }
 
 
@@ -87,7 +88,7 @@
     background-color: #59AB21 ;
 }
 
-@media(max-width:990px){
+@media(max-width:1150px){
     .contact,.header_buttons{
         display: none;
     }
@@ -95,7 +96,7 @@
         display: none ;
     }
 }
-@media(width <= 700px){
+@media(width <= 660px){
     .header_goods{
         flex-direction: column;
         margin-top: 30px;

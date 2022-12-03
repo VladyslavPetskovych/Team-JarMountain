@@ -1,3 +1,9 @@
-export default function Payment(){
-    return <h1>Список товарів</h1>
+import StoreList from "../components/StoreList/StoreList";
+
+export default function Payment() {
+  return (
+    <div>
+      <StoreList />
+    </div>
+  );
 }
