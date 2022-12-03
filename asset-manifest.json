@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Team-JarMountain/static/css/main.a5d6761f.css",
-    "main.js": "/Team-JarMountain/static/js/main.62ba6baf.js",
+    "main.js": "/Team-JarMountain/static/js/main.99e69ef0.js",
     "static/js/787.5ff617b2.chunk.js": "/Team-JarMountain/static/js/787.5ff617b2.chunk.js",
     "static/media/book_ukr-1.jpg": "/Team-JarMountain/static/media/book_ukr-1.0a04811f383ed41133e5.jpg",
     "index.html": "/Team-JarMountain/index.html",
     "main.a5d6761f.css.map": "/Team-JarMountain/static/css/main.a5d6761f.css.map",
-    "main.62ba6baf.js.map": "/Team-JarMountain/static/js/main.62ba6baf.js.map",
+    "main.99e69ef0.js.map": "/Team-JarMountain/static/js/main.99e69ef0.js.map",
     "787.5ff617b2.chunk.js.map": "/Team-JarMountain/static/js/787.5ff617b2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5d6761f.css",
-    "static/js/main.62ba6baf.js"
+    "static/js/main.99e69ef0.js"
   ]
 }
