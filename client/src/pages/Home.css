@@ -3,3 +3,17 @@
     background-color: #8CA9B7;
     color: white;
 }
+.klop{
+    height: 560px;
+   
+}
+.carouselItem{
+    height: 200px;
+    width: auto;
+}
+
+@media (width < 800px){
+    .recipe{
+        flex-direction: column;
+    }
+}
