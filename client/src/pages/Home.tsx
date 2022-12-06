@@ -4,6 +4,7 @@ import klop from "../assets/book_ukr-1.jpg";
 import { Carousel, Container } from "react-bootstrap";
 import jar1 from "../assets/malyna_jam-470x470.jpg";
 import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
@@ -75,6 +76,7 @@ export default function Home() {
         >
         </MDBCarouselItem>
       </MDBCarousel>
+      <Footer />
     </div>
   );
 }

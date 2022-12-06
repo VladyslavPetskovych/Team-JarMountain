@@ -3,7 +3,7 @@ import Axios from "axios";
 import Post from "./Post.js";
 import Pagination from "./Pagination.js";
 import { Container } from "react-bootstrap";
-import './MainList.css'
+import './StoreList.css'
 
 export default function (){
   const [posts, setPosts] = useState([]);
@@ -11,16 +11,16 @@ export default function (){
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setpostPerPage] = useState(8);
 
+  const fetchPosts = async () =>{
+    setLoading(true);
+    //  http://localhost:3001/api/get
+    const res = await Axios.get('http://tlwsn.westeurope.cloudapp.azure.com/api/items');
+    setPosts(res.data);
+    setLoading(false);
+    console.log(res)
+    }
 
   useEffect(()=>{
-      const fetchPosts = async () =>{
-          setLoading(true);
-          //  http://localhost:3001/api/get
-          const res = await Axios.get('http://tlwsn.westeurope.cloudapp.azure.com/api/items');
-          setPosts(res.data);
-          setLoading(false);
-          console.log(res)
-      }
       console.log("useEffect called")
       fetchPosts();
   },[]);
@@ -48,7 +48,7 @@ export default function (){
 
               {/* тут по-ідеї мають бути елементи списку*/}
 
-              <div className="container">
+              <div className="container d-flex flex-row flex-wrap p-5">
                   <Post posts={currentPosts} loading={loading} />  
               </div>
               <div className="mainlist__searchlabel">

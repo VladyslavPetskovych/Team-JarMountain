@@ -13,8 +13,8 @@ const Pagination = ({postPerPage, totalPost, paginate}) =>{
             {pageNumbers.map(number => (
                 <li key={number} className="page-item">
                     {/* коли робиться клік на номер сторінки, 
-                    викликається функція paginate, в яку я передаю номер сторінки на яку клікнув
-                    і в MainList.js воно встановлює currentPage сторінку, 
+                    викликається функція pagination, в яку я передаю номер сторінки на яку клікнув
+                    і в StoreList.tsx воно встановлює currentPage сторінку, 
                     що в свою чергу змінює значення таблиці і оновлює її*/}
                     <a  onClick={() => paginate(number)}  className="page-link"> 
                         {number}  

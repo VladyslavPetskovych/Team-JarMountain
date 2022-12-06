@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(-180deg, rgb(87, 207, 176,0.8), rgb(42, 181, 211,0.5));
+    background-image: linear-gradient(-180deg, rgba(176, 237, 221, 0.8), rgb(42, 181, 211,0.5));
     width: 100%;
     height: auto;
     min-height:100vh;
@@ -65,9 +65,9 @@
 }
 @media(min-width:930px){
     .List{
-        width: 80%;
-        margin-left: 145px;
-        margin-right: 145px;
+        width: 88%;
+        margin-left: 105px;
+        margin-right: 105px;
     }
     .mainlist-header-text{
         font-size: 3vw;
