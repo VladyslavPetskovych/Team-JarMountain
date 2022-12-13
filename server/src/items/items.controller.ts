@@ -10,7 +10,7 @@ import { ItemsService } from './items.service';
 import { CreateItemDto } from './dto/create-item.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 
-@Controller('items')
+@Controller('')
 export class ItemsController {
   constructor(private readonly itemsService: ItemsService) {}
 
