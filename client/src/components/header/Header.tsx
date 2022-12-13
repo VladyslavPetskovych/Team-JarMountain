@@ -9,7 +9,7 @@ function Header() {
     <div className="header flex-column ">
       <div className="header_strip ">
         <h1 className="site_title"> JarMountain </h1>
-        <Link to="/payment">
+        <Link to="/goods">
           <button className="header_buttons">Список товарів</button>
         </Link>
         <Link to="/">

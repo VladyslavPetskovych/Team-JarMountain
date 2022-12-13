@@ -2,6 +2,7 @@ import axios from "axios";
 import { FormEventHandler, useRef } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import Footer from "../components/footer/Footer";
 
 export default function Contact() {
   const name = useRef<HTMLInputElement>(null);
@@ -45,7 +46,7 @@ export default function Contact() {
     <div>
       <p>Contact</p>
       <div>
-        <form
+        <form className="m-5"
           onSubmit={onSubmit}
           style={{
             display: "flex",
@@ -53,13 +54,14 @@ export default function Contact() {
             width: "200px",
           }}
         >
-          <input type="text" placeholder="name" ref={name} />
-          <input type="text" placeholder="desc" ref={desc} />
-          <input type="text" placeholder="price" ref={price} />
-          <input type="file" name="" id="" ref={image} />
-          <input type="submit" value="aa" />
+          <input className="m-1" type="text" placeholder="name" ref={name} />
+          <input className="m-1" type="text" placeholder="desc" ref={desc} />
+          <input className="m-1" type="text" placeholder="price" ref={price} />
+          <input className="m-1" type="file" name="" id="" ref={image} />
+          <input className="m-1" type="submit" value="ДОДАТИ" />
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
