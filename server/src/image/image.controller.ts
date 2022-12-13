@@ -2,7 +2,7 @@ import { Controller, Get, Param, Res } from '@nestjs/common';
 import { Response } from 'express';
 import { resolve } from 'path';
 
-@Controller('image')
+@Controller('')
 export class ImageController {
   @Get(':id')
   findOne(@Param('id') id: string, @Res() response: Response) {
