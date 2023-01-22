@@ -9,12 +9,12 @@ export default function (){
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setpostPerPage] = useState(8);
+  const [postPerPage, setpostPerPage] = useState(12);
 
   const fetchPosts = async () =>{
     setLoading(true);
     //  http://localhost:3001/api/get
-    const res = await Axios.get('http://tlwsn.westeurope.cloudapp.azure.com/api/items');
+    const res = await Axios.get('http://localhost:3001/api/get');
     setPosts(res.data);
     setLoading(false);
     console.log(res)
@@ -38,7 +38,7 @@ export default function (){
           <div className="List">
               <div className="mainlist__searchlabel">
                   <div className="SearchBar">
-                      <input type="text" placeholder="Введіть назву каналу:"></input>
+                      <input type="text" placeholder="Введіть назву товару:"></input>
                       <button className="SearchBar_BtnFind">🔎</button>
                   </div>
                   <div className="container ">
@@ -48,12 +48,12 @@ export default function (){
 
               {/* тут по-ідеї мають бути елементи списку*/}
 
-              <div className="container d-flex flex-row flex-wrap p-5">
+              <div className="container d-flex flex-row flex-wrap p-5 justify-content-center">
                   <Post posts={currentPosts} loading={loading} />  
               </div>
               <div className="mainlist__searchlabel">
                   <div className="SearchBar">
-                      <input type="text" placeholder="Введіть назву каналу:"></input>
+                      <input type="text" placeholder="Введіть назву товару:"></input>
                       <button className="SearchBar_BtnFind">🔎</button>
                   </div>
                   <div className="container ">

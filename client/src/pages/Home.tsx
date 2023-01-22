@@ -8,7 +8,7 @@ import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
-    <div className="mt-4 ">
+    <div className="mt-4 wrapper_home">
       <h1 className=" home_title d-flex justify-content-center align-items-center ">
         Новини & Огляд
       </h1>
@@ -45,37 +45,42 @@ export default function Home() {
           </p>
         </Container>
       </Container>
-      <MDBCarousel
-        className="d-flex justify-content-center align-items-center m-auto mb-5  w-75"
-        showIndicators
-        showControls
-        fade
-      >
-        <MDBCarouselItem
-          className="w-100 "
-          itemId={1}
-          src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-          alt="..."
-        >
-        </MDBCarouselItem>
+      <div className="  justify-content-center ">
+      <Carousel className="d-flex  justify-content-center ">
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://www.thespruceeats.com/thmb/ZG8i3TpWm8XVnHTboW-JllXErxc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-mulberry-jam-1327843-hero-01-ef860d4b6fb941edad03476fb814b661.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Варення з малини</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images.immediate.co.uk/production/volatile/sites/30/2020/09/Redcurrant-jam-1f616e9.jpg"
+          alt="Second slide"
+        />
 
-        <MDBCarouselItem
-          className="w-100 d-block"
-          itemId={2}
-          src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
-          alt="..."
-        >
-          <p>Наші варення по всьому світу</p>
-        </MDBCarouselItem>
+        <Carousel.Caption>
+        <h3>Варення з чорносливу</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images.immediate.co.uk/production/volatile/sites/30/2020/09/Redcurrant-jam-1f616e9.jpg"
+          alt="Third slide"
+        />
 
-        <MDBCarouselItem
-          className="w-100 d-block"
-          itemId={3}
-          src={"https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"}
-          alt="..."
-        >
-        </MDBCarouselItem>
-      </MDBCarousel>
+        <Carousel.Caption>
+        <h3>Варення з бузини</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+      </div>
       <Footer />
     </div>
   );

@@ -20,39 +20,39 @@ export default function Post({ posts, loading }) {
   }
 
   let Show1render = posts.map((item) => {
-    console.log()
-    const quantity = getItemQuantity(item._id);
+    const quantity = getItemQuantity(item.id);
     return (
-      <div className="d-flex flex-column m-3  " key={item._id}>
+      <div className="d-flex flex-column itemcart" key= {item.name}>
         <img
           className="itemImg"
           src={
-            "http://tlwsn.westeurope.cloudapp.azure.com/api/image/" + item._id
+            "http://localhost:8080/" + item.name 
+            
           }
         />
         <div className="d-flex flex-row m-3 p-1 justify-content-between align-items-baseline">
-          <p className="m-1 fs-5 ">{item.name}</p>
-          <p className=" fs-5 text-muted">{item.price}</p>
+          <p className="m-1 fs-5 ">{item.itemname}</p>
+          <p className=" fs-5 text-muted">{item.itemprice}</p>
         </div>
-        <p className=" m-2">{item.description}</p>
+        <p className=" m-2">{item.itemdesc}</p>
         <div>
           {quantity === 0 ? (
             <Button
               className="w-100"
-              onClick={() => { increaseCartQuantity(item._id)}}
+              onClick={() => { increaseCartQuantity(item.id)}}
             >
               + Додати товар
             </Button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
-              style={{ gap: ".5rem" }}
+              style={{ gap: ".5rem", marginBottom: -41 }}
             >
               <div
                 className="d-flex align-items-center justify-content-center flex-row "
                 style={{ gap: ".5rem" }}
               >
-                <Button onClick={() => decreaseCartQuantity(item._id)}>
+                <Button onClick={() => decreaseCartQuantity(item.id)}>
                   -
                 </Button>
                 <div className="d-flex align-items-center justify-content-center flex-column">
@@ -60,11 +60,11 @@ export default function Post({ posts, loading }) {
                   <p></p>
                 </div>
                 <Button
-                  onClick={() => removeFromCart(item._id)}
+                  onClick={() => removeFromCart(item.id)}
                   variant="danger"
                   
                 >Видалити</Button>
-                <Button onClick={() => increaseCartQuantity(item._id)}>
+                <Button onClick={() => increaseCartQuantity(item.id)}>
                   +
                 </Button>
               </div>
